@@ -47,7 +47,15 @@ User.init(
           updatedUserData.password,
           10
         );
+        return updatedUserData;
       },
     },
+    sequeliez,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    model: "user",
   }
 );
+
+model.exports = User;
